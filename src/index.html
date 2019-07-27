@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+    <title>Crud con javascript y firebase</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a href="#" class="navbar-brand">Usuarios Crud</a>
+    </nav>
+    
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card border-primary mb-3">
+                    <div class="card-header">
+                        <h3 class="text-center">registro de usuarios</h3>    
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Nombre de usuario" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="description" placeholder="Descripción del usuario" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="age" placeholder="Edad del usuario" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="date" placeholder="Fecha de creación" class="form-control">
+                        </div>
+
+                        <button class="btn btn-primary btn-block" onclick="CreateUsers()">Crear Usuario</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div id="users-list"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+    <script src="../src/js/App.js"></script>
+</body>
+</html>
